@@ -12,6 +12,10 @@ Sistema de **"Agente de Apoio à Carreira e Desenvolvimento Profissional"**: Um 
 import json
 from datetime import datetime
 
+"""Agente de prendizado - Buscador de informações
+
+"""
+
 class BaseAgent:
     def __init__(self, name):
         self.name = name
@@ -44,6 +48,10 @@ class BaseAgent:
         print(f"[{self.name}] Enviando mensagem para [{destinatario.name}]: {mensagem}")
         destinatario.receber_mensagem(self, mensagem)
 
+"""Agente Verificador de Perfil
+
+"""
+
 class UserProfileAgent(BaseAgent):
     def __init__(self):
         super().__init__("Agente de Perfil do Usuário")
@@ -59,6 +67,11 @@ class UserProfileAgent(BaseAgent):
         self.user_data['area_interesse'] = input("Qual sua área de interesse para desenvolvimento? ")
         print(f"[{self.name}] Informações do usuário coletadas.")
         return self.user_data
+
+"""Agente de Documentos
+
+
+"""
 
 class DocumentGenerationAgent(BaseAgent):
     def __init__(self):
@@ -99,6 +112,8 @@ class DocumentGenerationAgent(BaseAgent):
         """
         return self.gerar_conteudo(carta)
 
+"""Agente desenvolvedor de sugestões"""
+
 class DevelopmentSuggestionAgent(BaseAgent):
     def __init__(self):
         super().__init__("Agente de Sugestão de Desenvolvimento")
@@ -125,6 +140,8 @@ class DevelopmentSuggestionAgent(BaseAgent):
         else:
             return self.nao_sei(f"Não tenho cursos específicos para a área de '{area_interesse}' no momento.")
 
+"""Agente de Interpretaçao dos dados e informações."""
+
 class InterviewPrepAgent(BaseAgent):
     def __init__(self):
         super().__init__("Agente de Preparação para Entrevistas")
@@ -148,6 +165,8 @@ class InterviewPrepAgent(BaseAgent):
         pergunta = random.choice(perguntas)
         return self.gerar_conteudo(f"Pergunta de simulação: {pergunta}")
 
+"""Agente conector de oportunidades."""
+
 class OpportunityConnectorAgent(BaseAgent):
     def __init__(self):
         super().__init__("Agente de Conexão com Oportunidades")
@@ -169,6 +188,10 @@ class OpportunityConnectorAgent(BaseAgent):
             return self.gerar_conteudo(f"Oportunidades encontradas para {area_interesse}: {oportunidades}")
         else:
             return self.especular(f"Não encontrei vagas específicas para '{area_interesse}' no meu banco de dados no momento. Talvez você encontre em plataformas como [Link para Indeed], [Link para LinkedIn Vagas].") # Exemplo de especulação com sugestão de fontes
+
+"""Integração entre agentes
+
+"""
 
 # Função para simular a interação entre os agentes
 def sistema_de_apoio_carreira():
