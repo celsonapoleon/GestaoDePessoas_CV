@@ -55,3 +55,18 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull re
 ## Licença
 
 [ Licença Academic Free v3.0, AFL-3.0 ]
+
+# Como Citar
+
+## ABNT
+
+NAPOLEON, Celso. **GestaoDePessoas_CV [software]**. Tupã, 2025. Disponível em: https://github.com/celsonapoleon/GestaoDePessoas_CV.
+
+## APA
+
+Napoleon, C. (2025). *GestaoDePessoas_CV* [software]. https://github.com/celsonapoleon/GestaoDePessoas_CV (Trabalho original publicado 2025)
+
+## Chicago Style
+
+Napoleon, Celso. *GestaoDePessoas_CV* [software]. 2025. Reprint, Tupã, 2025. https://github.com/celsonapoleon/GestaoDePessoas_CV.
+
